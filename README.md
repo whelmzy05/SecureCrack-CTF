@@ -48,22 +48,22 @@ SecureCrack/
 ### MainActivity.java
 
 - Displays a login screen.
-- Hardcoded credentials (e.g., `username: admin`, `password: crackme123`).
-- On correct login, navigates to `FlagActivity`.
+- Hardcoded credentials (e.g., `username: admin`, `password: pass1234`).
+- On correct login, navigates to `SecretActivity`.
 
 ```java
 String correctUsername = "admin";
-String correctPassword = "crackme123";
+String correctPassword = "pass1234";
 
 if (username.equals(correctUsername) && password.equals(correctPassword)) {
-    Intent intent = new Intent(MainActivity.this, FlagActivity.class);
+    Intent intent = new Intent(MainActivity.this, SecretActivity.class);
     startActivity(intent);
 }
 ```
 
 ---
 
-### FlagActivity.java
+### SecretActivity.java
 
 - Displays the **FLAG** only if login was successful.
 
@@ -112,7 +112,7 @@ flagText.setText("CTF{Reverse_It_And_You_Shall_Find}");
 
 4. Use the following credentials to log in (or reverse the APK to find them):
    - **Username:** `admin`
-   - **Password:** `crackme123`
+   - **Password:** `pass1234`
 
 ---
 
